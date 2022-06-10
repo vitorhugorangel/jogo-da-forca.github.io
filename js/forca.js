@@ -221,7 +221,7 @@ function criarPalavraSecreta() {
 montarPalavraNaTela();
 function montarPalavraNaTela() {
     const categoria = document.getElementById("categoria");
-    categoria.innerHTML = palavraSecretaCategoria;
+    categoria.innerHTML = 'Categoria: ' + palavraSecretaCategoria;
 
     const palavraTela = document.getElementById("palavra-secreta");
     palavraTela.innerHTML = "";
@@ -320,7 +320,12 @@ function abreModal(titulo, mensagem) {
     });
 }
 
-let bntReiniciar = document.querySelector("#btnReiniciar")
-bntReiniciar.addEventListener("click", function () {
+let btnReiniciar = document.querySelector("#btnReiniciar")
+btnReiniciar.addEventListener("click", function () {
+    location.reload();
+});
+
+let bntFechar = document.querySelector("#btnFechar")
+bntFechar.addEventListener("click", function () {
     location.reload();
 });
